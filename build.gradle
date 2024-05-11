@@ -22,6 +22,7 @@ test {
     useTestNG() {
         useDefaultListeners = true
         suites 'src/test/resources/suites/testng.xml'
+        listeners << 'org.testng.reporters.JUnitXMLReporter'
     }
 
     finalizedBy jacocoTestReport // report is always generated after tests run
