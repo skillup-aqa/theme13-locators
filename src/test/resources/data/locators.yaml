@@ -1,0 +1,52 @@
+xpath:
+  # All elements with tag name 'a'
+  byTagName: '//a'
+
+  # All elements with tag name 'a' and descendant with tag name 'img'
+  elementWithDescendant: ''
+
+  # All elements with tag name 'a' or tag name 'button'
+  byTagNameWithOr: ''
+
+  # All elements with tag name 'div' that are before an element with tag name 'button'
+  byTagNameFollowedBy: ''
+
+  # Any element with id 'shopping_cart_container'
+  byId: ''
+
+  # All elements with class name 'inventory_item_name'
+  byClassName: ''
+
+  # First element that has data-test attribute starting from 'add-to-cart'
+  firstElementWithDataTest: ''
+
+  # Every second element with class name 'inventory_item_name'
+  everySecondElementWithClassName: ''
+
+  # "Add to cart" button for a product with name 'Sauce Labs Bolt T-Shirt'
+  byText: ''
+
+css:
+  # All elements with tag name 'a'
+  byTagName: 'a'
+
+  # All elements with tag name 'a' and descendant with tag name 'img'
+  elementWithDescendant: ''
+
+  # All elements with tag name 'a' or tag name 'button'
+  byTagNameWithOr: ''
+
+  # All elements with tag name 'button' that are following tag name 'div'
+  byTagNameFollowedBy: ''
+
+  # Any element with id 'shopping_cart_container'
+  byId: ''
+
+  # All elements with class name 'inventory_item_name'
+  byClassName: ''
+
+  # First element that has data-test attribute starting from 'add-to-cart'
+  firstElementWithDataTest: ''
+
+  # Every second element with class name 'inventory_item'
+  everySecondElementWithClassName: ''

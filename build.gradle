@@ -11,13 +11,17 @@ repositories {
 }
 
 dependencies {
+    // https://mvnrepository.com/artifact/org.yaml/snakeyaml
+    implementation 'org.yaml:snakeyaml:2.2'
+
     testImplementation 'org.testng:testng:7.10.2'
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.20.0'
 }
 
 test {
     useTestNG() {
         useDefaultListeners = true
-        suites 'src/test/resources/testng.xml'
+        suites 'src/test/resources/suites/testng.xml'
     }
 
     finalizedBy jacocoTestReport // report is always generated after tests run
