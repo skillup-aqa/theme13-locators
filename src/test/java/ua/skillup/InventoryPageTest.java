@@ -5,6 +5,7 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 import ua.skillup.utils.LocatorsReader;
@@ -40,7 +41,10 @@ public class InventoryPageTest {
 
     @BeforeClass
     public void setUpDriver() {
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless=new");
+
+        driver = new ChromeDriver(options);
         driver.manage().window().setSize(new Dimension(1920, 1080));
         driver.get("https://www.saucedemo.com");
 
