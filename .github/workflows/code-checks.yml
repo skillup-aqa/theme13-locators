@@ -33,10 +33,3 @@ jobs:
           name: test-results
           path: build/reports
 
-      - name: Test Report
-        uses: dorny/test-reporter@v1
-        if: success() || failure()
-        with:
-          name: Publish Test Report
-          path: build/reports/tests/test/junitreports/*.xml
-          reporter: java-junit
