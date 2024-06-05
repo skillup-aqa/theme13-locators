@@ -3,25 +3,25 @@ xpath:
   byTagName: '//a'
 
   # All elements with tag name 'a' and descendant with tag name 'img'
-  elementWithDescendant: ''
+  elementWithDescendant: '//a/img'
 
   # All elements with tag name 'a' or tag name 'button'
-  byTagNameWithOr: ''
+  byTagNameWithOr: '//a|//button'
 
   # All elements with tag name 'div' that are before an element with tag name 'button'
-  byTagNameFollowedBy: ''
+  byTagNameFollowedBy: '//button/preceding-sibling::div'
 
   # Any element with id 'shopping_cart_container'
-  byId: ''
+  byId: '//*[@id=''shopping_cart_container'']'
 
   # All elements with class name 'inventory_item_name'
-  byClassName: ''
+  byClassName: '//*[contains(@class, "inventory_item_name")]'
 
   # First element that has data-test attribute starting from 'add-to-cart'
-  firstElementWithDataTest: ''
+  firstElementWithDataTest: '//*[starts-with(@data-test, "add-to-cart")]'
 
   # Every second element with class name 'inventory_item_name'
-  everySecondElementWithClassName: ''
+  everySecondElementWithClassName: '(//*[contains(@class, "inventory_item_name")])[position() mod 2 = 0]'
 
   # "Add to cart" button for a product with name 'Sauce Labs Bolt T-Shirt'
   byText: ''
