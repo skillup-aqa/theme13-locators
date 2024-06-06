@@ -19,6 +19,7 @@ xpath:
 
   # First element that has data-test attribute starting from 'add-to-cart'
   firstElementWithDataTest: '//*[starts-with(@data-test, "add-to-cart")]'
+  #think that (//*[starts-with(@data-test, "add-to-cart")])[1] - will be more correct to find first element
 
   # Every second element with class name 'inventory_item_name'
   everySecondElementWithClassName: '(//*[contains(@class, "inventory_item_name")])[position() mod 2 = 0]'
@@ -31,22 +32,23 @@ css:
   byTagName: 'a'
 
   # All elements with tag name 'a' and descendant with tag name 'img'
-  elementWithDescendant: ''
+  elementWithDescendant: 'a img'
 
   # All elements with tag name 'a' or tag name 'button'
-  byTagNameWithOr: ''
+  byTagNameWithOr: 'a,button'
 
   # All elements with tag name 'button' that are following tag name 'div'
-  byTagNameFollowedBy: ''
+  byTagNameFollowedBy: 'div+button'
 
   # Any element with id 'shopping_cart_container'
-  byId: ''
+  byId: '#shopping_cart_container'
 
   # All elements with class name 'inventory_item_name'
-  byClassName: ''
+  byClassName: '.inventory_item_name'
 
   # First element that has data-test attribute starting from 'add-to-cart'
-  firstElementWithDataTest: ''
+  firstElementWithDataTest: '[data-test^="add-to-cart"]'
 
   # Every second element with class name 'inventory_item'
-  everySecondElementWithClassName: ''
+  everySecondElementWithClassName: '.inventory_item:nth-of-type(2n) .inventory_item_name'
+  #for me the requirement is to find such locator .inventory_item:nth-of-type(2n) (just by class)
