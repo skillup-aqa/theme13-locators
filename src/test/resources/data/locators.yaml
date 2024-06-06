@@ -9,8 +9,8 @@ xpath:
   byTagNameWithOr: '//a|//button'
 
   # All elements with tag name 'div' that are before an element with tag name 'button'
-  byTagNameFollowedBy: '//button/preceding-sibling::div'
-
+  byTagNameFollowedBy: '//div/following-sibling::button'
+  #think that //button/preceding-sibling::div will be correctly
   # Any element with id 'shopping_cart_container'
   byId: '//*[@id=''shopping_cart_container'']'
 
@@ -24,7 +24,7 @@ xpath:
   everySecondElementWithClassName: '(//*[contains(@class, "inventory_item_name")])[position() mod 2 = 0]'
 
   # "Add to cart" button for a product with name 'Sauce Labs Bolt T-Shirt'
-  byText: ''
+  byText: '//*[text()="Sauce Labs Bolt T-Shirt"]/ancestor::div[@class="inventory_item"]//button'
 
 css:
   # All elements with tag name 'a'
