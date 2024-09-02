@@ -12,7 +12,7 @@ repositories {
 
 dependencies {
     // https://mvnrepository.com/artifact/org.yaml/snakeyaml
-    implementation 'org.yaml:snakeyaml:2.2'
+    implementation 'org.yaml:snakeyaml:2.3'
 
     testImplementation 'org.testng:testng:7.10.2'
     testImplementation 'org.seleniumhq.selenium:selenium-java:4.22.0'
