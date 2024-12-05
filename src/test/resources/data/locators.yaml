@@ -3,50 +3,52 @@ xpath:
   byTagName: '//a'
 
   # All elements with tag name 'a' and descendant with tag name 'img'
-  elementWithDescendant: ''
+  elementWithDescendant: '//a/img'
 
   # All elements with tag name 'a' or tag name 'button'
-  byTagNameWithOr: ''
+  byTagNameWithOr: '//a|//button'
 
   # All elements with tag name 'div' that are before an element with tag name 'button'
-  byTagNameFollowedBy: ''
-
+  byTagNameFollowedBy: '//div/following-sibling::button'
+  #think that //button/preceding-sibling::div will be correctly
   # Any element with id 'shopping_cart_container'
-  byId: ''
+  byId: '//*[@id=''shopping_cart_container'']'
 
   # All elements with class name 'inventory_item_name'
-  byClassName: ''
+  byClassName: '//*[contains(@class, "inventory_item_name")]'
 
   # First element that has data-test attribute starting from 'add-to-cart'
-  firstElementWithDataTest: ''
+  firstElementWithDataTest: '//*[starts-with(@data-test, "add-to-cart")]'
+  #think that (//*[starts-with(@data-test, "add-to-cart")])[1] - will be more correct to find first element
 
   # Every second element with class name 'inventory_item_name'
-  everySecondElementWithClassName: ''
+  everySecondElementWithClassName: '(//*[contains(@class, "inventory_item_name")])[position() mod 2 = 0]'
 
   # "Add to cart" button for a product with name 'Sauce Labs Bolt T-Shirt'
-  byText: ''
+  byText: '//*[text()="Sauce Labs Bolt T-Shirt"]/ancestor::div[@class="inventory_item"]//button'
 
 css:
   # All elements with tag name 'a'
   byTagName: 'a'
 
   # All elements with tag name 'a' and descendant with tag name 'img'
-  elementWithDescendant: ''
+  elementWithDescendant: 'a img'
 
   # All elements with tag name 'a' or tag name 'button'
-  byTagNameWithOr: ''
+  byTagNameWithOr: 'a,button'
 
   # All elements with tag name 'button' that are following tag name 'div'
-  byTagNameFollowedBy: ''
+  byTagNameFollowedBy: 'div+button'
 
   # Any element with id 'shopping_cart_container'
-  byId: ''
+  byId: '#shopping_cart_container'
 
   # All elements with class name 'inventory_item_name'
-  byClassName: ''
+  byClassName: '.inventory_item_name'
 
   # First element that has data-test attribute starting from 'add-to-cart'
-  firstElementWithDataTest: ''
+  firstElementWithDataTest: '[data-test^="add-to-cart"]'
 
   # Every second element with class name 'inventory_item'
-  everySecondElementWithClassName: ''
+  everySecondElementWithClassName: '.inventory_item:nth-of-type(2n) .inventory_item_name'
+  #for me the requirement is to find such locator .inventory_item:nth-of-type(2n) (just by class)
